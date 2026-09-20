@@ -1,10 +1,11 @@
 {
-  "name": "salt-light-real-estate",
+  "name": "emmanuel-maldonado-real-estate",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "deploy": "npm run build && firebase deploy --only hosting",
     "start": "next start",
     "lint": "eslint"
   },

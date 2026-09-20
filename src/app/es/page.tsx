@@ -1,0 +1,27 @@
+import Image from "next/image";
+import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Bienes Raíces en Hampton Roads | Emmanuel Maldonado",
+  description: "Orientación personal de bienes raíces en español por Emmanuel Maldonado de Salt & Light Real Estate.",
+};
+
+const servicios = [
+  ["Comprar con claridad", "Un proceso claro y paciente, basado en sus prioridades, sus finanzas y la realidad de ser propietario."],
+  ["Vender con un plan", "Preparamos y presentamos su propiedad con cuidado, y le mantenemos informado hasta el cierre."],
+  ["Ser propietario con perspectiva", "Experiencia práctica en administración de propiedades para tomar decisiones sobre mantenimiento, alquiler o venta."],
+];
+
+export default function InicioEspanol() {
+  return <main lang="es">
+    <header className="site-header"><Link className="brand" href="/es"><span>Salt &amp; Light</span><small>Real Estate</small><em>Emmanuel Maldonado</em></Link><nav aria-label="Navegación principal"><a href="#servicios">Servicios</a><a href="#sobre-mi">Sobre mí</a><a href="#areas">Ciudades</a></nav><Link className="language-note" href="/" lang="en">View in English</Link><Link className="header-cta" href="/contact">Contacto</Link></header>
+    <section className="hero"><div className="hero-copy"><p className="eyebrow">Bienes raíces con Emmanuel Maldonado</p><h1>Orientación antes, durante y después del cierre.</h1><p className="hero-lede">Orientación clara para compradores, vendedores y propietarios en Hampton Roads.</p><div className="hero-actions"><Link className="button button-gold" href="/contact">Iniciar una conversación</Link><a className="text-link" href="#servicios">Cómo puedo ayudarle <span>→</span></a></div><p className="brokerage">Salt &amp; Light Real Estate · Brokered by Rooted Residential</p></div><div className="hero-photo"><Image src="/images/virginia-beach-coast.jpg" alt="La costa de Virginia Beach al atardecer" fill priority sizes="(max-width: 800px) 100vw, 46vw" /><div className="photo-caption"><strong>Conocimiento local. Atención personal.</strong><span>Al servicio de compradores, vendedores y propietarios en Hampton Roads</span></div></div></section>
+    <section className="quiet-intro"><p className="eyebrow">Un servicio basado en relaciones</p><h2>Las decisiones de bienes raíces merecen tiempo, contexto y orientación honesta.</h2><p>Quiero que entienda la decisión que tiene por delante y se sienta preparado para lo que sigue.</p></section>
+    <section className="services" id="servicios">{servicios.map(([titulo,texto],index)=><article key={titulo}><span>0{index+1}</span><h3>{titulo}</h3><p>{texto}</p><Link href="/contact">Conversemos →</Link></article>)}</section>
+    <section className="about" id="sobre-mi"><div className="about-photo"><Image src="/images/emmanuel-maldonado.jpg" alt="Emmanuel Maldonado" fill sizes="(max-width: 820px) 100vw, 34vw" /></div><div><p className="eyebrow">Conozca a Emmanuel Maldonado</p><h2>Atención personal respaldada por experiencia diaria.</h2><p>Mi trabajo en administración de propiedades me da una perspectiva práctica de lo que significa ser propietario después del cierre, desde el mantenimiento y los costos hasta los inquilinos y las decisiones futuras.</p><p>Quiero ser un recurso útil antes de su mudanza, durante la transacción y mucho después de entregarle las llaves.</p><Link className="text-link" href="/contact">Comuníquese conmigo <span>→</span></Link></div></section>
+    <section className="service-areas" id="areas"><div className="service-area-heading"><p className="eyebrow">Hampton Roads</p><h2>Orientación local en toda la región.</h2><p>Cada ciudad ofrece distintos vecindarios, tiempos de viaje, tipos de propiedad y responsabilidades. Nos enfocaremos en lo que mejor se adapte a su vida.</p></div><div className="city-accordions"><details><summary>Virginia Beach</summary><div><p>Comunidades costeras, suburbanas y establecidas con diferentes consideraciones de transporte y propiedad.</p></div></details><details><summary>Norfolk</summary><div><p>Vecindarios históricos, comodidad urbana, áreas frente al agua y casas con carácter propio.</p></div></details><details><summary>Chesapeake</summary><div><p>Una amplia combinación de comunidades suburbanas, zonas rurales, desarrollos nuevos y vecindarios establecidos.</p></div></details><details><summary>Suffolk</summary><div><p>Comunidades en crecimiento, más espacio, construcción nueva y diversas opciones de propiedad.</p></div></details><details><summary>Portsmouth</summary><div><p>Arquitectura histórica, acceso al agua y oportunidades que merecen una evaluación cuidadosa.</p></div></details><details><summary>Hampton</summary><div><p>Comunidades de la Península con acceso costero, vecindarios establecidos y variados estilos de vivienda.</p></div></details><details><summary>Newport News</summary><div><p>Vecindarios de la Península con diversas opciones de vivienda y transporte.</p></div></details></div></section>
+    <section className="contact"><div><p className="eyebrow">Comience aquí</p><h2>¿En qué puedo ayudarle?</h2><p>Me gustaría conocer sus metas y saber qué está considerando.</p></div><Link className="button button-light" href="/contact">Contactar a Emmanuel</Link></section>
+    <footer><span>© 2026 Salt &amp; Light Real Estate</span><span>Emmanuel Maldonado · Brokered by Rooted Residential</span><Link href="/">English</Link></footer>
+  </main>;
+}

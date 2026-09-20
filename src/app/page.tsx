@@ -1,69 +1,23 @@
 import Image from "next/image";
+import Link from "next/link";
+
+const services = [
+  ["Buy a home", "Understand your options, prepare for the process, and make decisions that fit your life and finances."],
+  ["Sell a home", "Prepare and position your property with a clear plan and consistent communication through closing."],
+  ["Plan for ownership", "Get practical perspective on maintenance, rental readiness, and whether selling or renting makes sense."],
+];
 
 export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+  return <main>
+    <header className="site-header"><Link className="brand" href="/" aria-label="Salt and Light Real Estate home"><span>Salt &amp; Light</span><small>Real Estate</small><em>Emmanuel Maldonado</em></Link><nav aria-label="Main navigation"><Link href="/">Home</Link><Link href="/articles/buyer-roadmap">Buyer guide</Link><a href="#service-areas">Explore the 7 Cities</a><a href="#about">About</a></nav><Link className="language-note" href="/es" lang="es">Se habla español</Link><Link className="header-cta" href="/contact">Contact</Link></header>
+    <section className="hero hero-overlay"><div className="hero-copy"><p className="eyebrow">Real estate guidance from Emmanuel Maldonado</p><h1>Clear guidance for buying, selling, and owning a home in Hampton Roads.</h1><p className="hero-lede">Personal service, honest education, and practical insight for every stage of homeownership.</p><div className="hero-actions"><Link className="button button-gold" href="/contact">Start a conversation</Link><a className="text-link" href="#services">How I can support you <span>→</span></a></div><p className="brokerage">Salt &amp; Light Real Estate · Brokered by Rooted Residential</p></div><div className="hero-photo"><Image src="/images/first-landing-shoreline.jpg" alt="Chesapeake Bay shoreline at First Landing State Park in Virginia Beach" fill priority sizes="100vw" /><a className="photo-credit" href="https://commons.wikimedia.org/wiki/File:Shoreline_First_Landing_State_Park_(7818013536).jpg" target="_blank" rel="noreferrer">Photo: Virginia State Parks, CC BY 2.0</a></div></section>
+    <section className="quiet-intro"><p className="eyebrow">An approach built on relationships</p><h2>Real estate decisions deserve time, context, and honest guidance.</h2><p>I want you to understand the decision in front of you and feel prepared for what comes after it.</p></section>
+    <section className="services" id="services"><div className="services-intro"><p className="eyebrow">Buying · Selling · Ownership</p><h2>Real estate guidance built around you.</h2><p className="services-lede">Whether you are preparing for a move or thinking a few years ahead, you will have practical guidance at every step.</p></div><div className="services-list">{services.map(([title,copy])=><article key={title}><h3>{title}</h3><p>{copy}</p></article>)}</div><Link className="services-contact" href="/contact">Start a conversation <span>→</span></Link></section>
+    <section className="about" id="about"><div className="about-photo"><Image src="/images/emmanuel-maldonado.jpg" alt="Emmanuel Maldonado" fill sizes="(max-width: 820px) 100vw, 34vw" /></div><div><p className="eyebrow">Meet Emmanuel Maldonado</p><h2>A practical perspective on ownership.</h2><p>Property management has shown me the full lifecycle of a home, from day-to-day care to rental potential and future decisions.</p><p>I am building Salt &amp; Light around being a useful resource before, during, and after the transaction.</p><Link className="text-link" href="/card">Save my digital card <span>→</span></Link></div></section>
+    <section className="resources" id="resources"><p className="eyebrow">Practical resources</p><h2>Start informed.</h2><p className="resources-lede">I am starting with one useful guide and will add more only when they are ready.</p><div className="resource-links"><Link href="/articles/buyer-roadmap">Hampton Roads Buyer Roadmap <span>→</span></Link></div></section>
+    <section className="article-section"><div className="section-heading"><div><p className="eyebrow">Featured guide</p><h2>Know what to expect before you begin.</h2></div></div><article className="featured-article"><div><p>Buying in Hampton Roads</p><h3>Your Hampton Roads Buyer Roadmap</h3></div><div><span>A straightforward look at preparation, financing, showings, offers, inspections, closing, and what happens afterward.</span><Link className="text-link" href="/articles/buyer-roadmap">Read the complete guide <span>→</span></Link></div></article></section>
+    <section className="service-areas" id="service-areas"><div className="service-area-heading"><p className="eyebrow">Serving Hampton Roads</p><h2>Local guidance across the region.</h2><p>The seven cities offer different locations, housing types, transportation routes, waterfronts, and public amenities. I can help you compare objective information using the priorities you choose.</p></div><div className="city-accordions"><details id="virginia-beach"><summary>Virginia Beach</summary><div><p>Atlantic Ocean and Chesapeake Bay locations, inland residential areas, employment centers, and a mix of housing types.</p><Link className="city-link" href="/areas/virginia-beach">Explore the Virginia Beach guide →</Link></div></details><details id="norfolk"><summary>Norfolk</summary><div><p>An urban waterfront city with historic housing, a downtown core, major military and employment centers, and multiple transportation options.</p></div></details><details id="chesapeake"><summary>Chesapeake</summary><div><p>Urban, suburban, and rural areas with varied housing types, commercial centers, parks, and major road connections.</p></div></details><details id="suffolk"><summary>Suffolk</summary><div><p>A large city with a historic downtown, suburban development, rural land, waterways, and access to Interstate 664.</p></div></details><details id="portsmouth"><summary>Portsmouth</summary><div><p>A compact Elizabeth River city with historic districts, maritime roots, and a mix of older and newer housing.</p></div></details><details id="hampton"><summary>Hampton</summary><div><p>A Chesapeake Bay city with waterfront areas, historic sites, employment centers, and housing that ranges from older homes to condominiums.</p></div></details><details id="newport-news"><summary>Newport News</summary><div><p>A James River city with shipbuilding and research employers, public parks, residential areas, and major road connections.</p></div></details></div></section>
+    <section className="contact" id="contact"><div><p className="eyebrow">Begin here</p><h2>What are you considering?</h2><p>No pressure and no assumptions. Share what is on your mind, and I will follow up personally.</p></div><Link className="button button-light" href="/contact">Contact Emmanuel</Link></section>
+    <footer className="site-footer"><div className="footer-main"><div><strong>Salt &amp; Light Real Estate</strong><span>Emmanuel Maldonado · Real Estate Agent &amp; Property Manager</span><span>Brokered by Rooted Residential</span></div><div><strong>Hampton Roads</strong><div className="footer-city-links"><Link href="/areas/virginia-beach">Virginia Beach</Link><a href="#norfolk">Norfolk</a><a href="#chesapeake">Chesapeake</a><a href="#suffolk">Suffolk</a><a href="#portsmouth">Portsmouth</a><a href="#hampton">Hampton</a><a href="#newport-news">Newport News</a></div></div><div><strong>Connect</strong><Link href="/contact">Contact Emmanuel</Link><Link href="/card">Digital business card</Link><Link href="/articles/buyer-roadmap">Buyer Roadmap</Link></div></div><div className="footer-bottom"><span>© 2026 Salt &amp; Light Real Estate</span><span>Serving Hampton Roads, Virginia</span></div></footer>
+  </main>;
 }
