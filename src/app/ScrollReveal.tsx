@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function ScrollReveal(){
+  const pathname=usePathname();
   useEffect(()=>{
     const reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const selectors=[".quiet-intro",".services article",".about > *",".resources > *",".featured-article > *",".service-area-heading > *",".city-accordions details",".contact > *",".footer-main > *"];
@@ -22,6 +24,6 @@ export default function ScrollReveal(){
     },{threshold:.12,rootMargin:"0px 0px -7% 0px"});
     elements.forEach((element)=>observer.observe(element));
     return()=>observer.disconnect();
-  },[]);
+  },[pathname]);
   return null;
 }
