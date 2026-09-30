@@ -5,16 +5,6 @@ import { useEffect, useState } from "react";
 
 export default function ShareCardButton() {
   const [copied, setCopied] = useState(false);
-  const [showQr, setShowQr] = useState(false);
-
-  useEffect(() => {
-    if (!showQr) return;
-    const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setShowQr(false);
-    };
-    document.addEventListener("keydown", closeOnEscape);
-    return () => document.removeEventListener("keydown", closeOnEscape);
-  }, [showQr]);
 
   async function share() {
     const url = "https://saltandlight757.com/card/";
@@ -32,9 +22,23 @@ export default function ShareCardButton() {
     window.setTimeout(() => setCopied(false), 2200);
   }
 
+  return <button type="button" onClick={share}>{copied ? "Link copied" : "Share with a friend"}</button>;
+}
+
+export function ShowQrButton() {
+  const [showQr, setShowQr] = useState(false);
+
+  useEffect(() => {
+    if (!showQr) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setShowQr(false);
+    };
+    document.addEventListener("keydown", closeOnEscape);
+    return () => document.removeEventListener("keydown", closeOnEscape);
+  }, [showQr]);
+
   return <>
     <button className="qr-button" type="button" onClick={() => setShowQr(true)}>Show QR code</button>
-    <button type="button" onClick={share}>{copied ? "Link copied" : "Share with a friend"}</button>
     {showQr && <div className="qr-modal" role="dialog" aria-modal="true" aria-labelledby="qr-title" onClick={() => setShowQr(false)}>
       <div className="qr-panel" onClick={(event) => event.stopPropagation()}>
         <button className="qr-close" type="button" aria-label="Close QR code" onClick={() => setShowQr(false)}>×</button>
