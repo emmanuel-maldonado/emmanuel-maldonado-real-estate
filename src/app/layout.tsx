@@ -8,8 +8,12 @@ export const metadata: Metadata = {
   title: "Salt & Light Real Estate | Emmanuel Maldonado",
   description: "Hampton Roads real estate guidance centered on relationships from Emmanuel Maldonado of Salt & Light Real Estate.",
   icons: {
-    icon: "/card-icons/icon-192.png",
-    apple: "/card-icons/apple-touch-icon.png",
+    icon: [
+      { url: "/card-icons/icon-192.png?v=2", sizes: "192x192", type: "image/png" },
+      { url: "/card-icons/icon-512.png?v=2", sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: "/card-icons/icon-192.png?v=2",
+    apple: "/card-icons/apple-touch-icon.png?v=2",
   },
   openGraph: {
     type: "website",
