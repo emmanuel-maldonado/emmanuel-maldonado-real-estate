@@ -1,5 +1,8 @@
+import { pageMetadata } from "@/lib/site-metadata";
 import Link from "next/link";
 import ContactForm from "./ContactForm";
+
+export const metadata = pageMetadata("/contact/", "Contact Emmanuel Maldonado | Salt & Light Real Estate", "Contact Emmanuel Maldonado at 757-672-6065 for guidance on buying, selling, and owning a home in Hampton Roads, Virginia.");
 
 export default function ContactPage() {
   return <main>

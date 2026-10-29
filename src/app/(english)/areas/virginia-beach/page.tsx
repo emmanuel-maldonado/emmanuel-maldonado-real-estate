@@ -1,11 +1,9 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site-metadata";
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Virginia Beach Real Estate Guide | Emmanuel Maldonado",
-  description: "A practical guide to buying and owning a home in Virginia Beach from Emmanuel Maldonado of Salt & Light Real Estate.",
-};
+export const metadata = pageMetadata("/areas/virginia-beach/", "Virginia Beach Real Estate Guide | Emmanuel Maldonado", "A practical guide to buying and owning a home in Virginia Beach from Emmanuel Maldonado of Salt & Light Real Estate.");
+
 
 export default function VirginiaBeachPage() {
   return <main>
