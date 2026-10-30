@@ -1,0 +1,103 @@
+
+.sell-page .seller-hero{position:relative;isolation:isolate;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;padding:90px clamp(28px,7vw,112px);background:var(--navy);overflow:hidden}
+.sell-page .seller-hero::before{content:"";position:absolute;inset:0;z-index:-2;background:url(/images/first-landing-shoreline-1280.webp) center 58%/cover}
+.sell-page .seller-hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(8,29,45,.96) 0%,rgba(8,29,45,.86) 45%,rgba(8,29,45,.55) 100%)}
+.sell-page .seller-hero .eyebrow{color:#e9bd62}
+.sell-page .seller-hero h1{margin:0;color:#fff;font-size:clamp(44px,5vw,70px);line-height:1.02;letter-spacing:-.03em}
+.sell-page .hero-lede{max-width:600px;margin:28px 0;color:#e3ebee;font-size:19px;line-height:1.7}
+.sell-page .hero-points{list-style:none;margin:0 0 30px;padding:0;display:grid;gap:12px;color:#e3ebee;font-size:16px}
+.sell-page .hero-points li::before{content:"";display:inline-block;width:8px;height:8px;margin-right:12px;background:var(--gold);transform:rotate(45deg) translateY(-2px)}
+.sell-page .hero-call{color:#fff;font-weight:700}
+.sell-page .hero-call a{color:#e9bd62;font-family:Georgia,serif;font-size:24px;font-weight:400;margin-left:6px}
+.sell-page .brokerage{margin:32px 0 0;color:#d0dce0;font-size:12px;letter-spacing:.05em}
+.sell-page .value-form{display:grid;gap:18px;padding:38px;background:#fff;box-shadow:0 24px 70px rgba(0,0,0,.3);border-top:4px solid var(--gold)}
+.sell-page .value-form h2{margin:0;font-size:30px;line-height:1.1}
+.sell-page .value-form .form-sub{margin:-6px 0 4px;color:var(--muted);font-size:14px;line-height:1.55}
+.sell-page .value-form label{display:grid;gap:8px;color:var(--navy);font-size:13px;font-weight:700}
+.sell-page .value-form label small{color:var(--muted);font-size:11px;font-weight:400}
+.sell-page .value-form input,.sell-page .value-form select,.sell-page .value-form textarea{width:100%;border:1px solid #b9c7ca;border-radius:3px;background:#fff;padding:13px;color:var(--ink);font:16px Arial,sans-serif}
+.sell-page .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.sell-page .form-status{margin:0;color:var(--muted);font-size:12px;line-height:1.5}
+.sell-page .how{padding:120px clamp(28px,8vw,130px);background:#fff}
+.sell-page .section-head{max-width:820px}
+.sell-page .section-head h2{margin:0;font-size:clamp(38px,4.6vw,60px);line-height:1.08}
+.sell-page .section-head p{margin:22px 0 0;color:var(--muted);font-size:18px;line-height:1.75}
+.sell-page .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:58px}
+.sell-page .steps article{padding:34px 32px;background:var(--sand);border-top:3px solid var(--teal)}
+.sell-page .steps span{color:var(--gold);font-size:12px;font-weight:700;letter-spacing:.18em}
+.sell-page .steps h3{margin:16px 0 12px;font-size:28px}
+.sell-page .steps p{margin:0;color:var(--muted);line-height:1.7}
+.sell-page .disclaimer{margin-top:34px;padding:20px 24px;border-left:3px solid var(--gold);background:#fbf8f1;color:var(--ink);font-size:15px;line-height:1.7;max-width:900px}
+.sell-page .why{display:block;padding:110px clamp(28px,8vw,130px);background:var(--navy);color:#fff}
+.sell-page .why .section-head{margin:0 auto 54px;text-align:center}
+.sell-page .why .eyebrow{color:var(--gold)}
+.sell-page .why h2{color:#fff}
+.sell-page .why .section-head p{color:#cbd8dc}
+.sell-page .why-grid{display:grid;grid-template-columns:minmax(260px,.75fr) 2fr;gap:56px;max-width:1240px;margin:auto;align-items:start}
+.sell-page .why-photo{position:relative;aspect-ratio:4/5;overflow:hidden;background:#123}
+.sell-page .why-photo img{width:100%;height:100%;object-fit:cover;object-position:center}
+.sell-page .why-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.sell-page .why-list article{padding:32px 30px;border-top:3px solid var(--gold);background:rgba(255,255,255,.055)}
+.sell-page .why-list h3{margin:0 0 14px;color:#fff;font-size:26px}
+.sell-page .why-list p{margin:0;color:#cbd8dc;font-size:16px;line-height:1.72}
+.sell-page .process{padding:120px clamp(28px,8vw,130px);background:var(--sand)}
+.sell-page .timeline{list-style:none;margin:56px 0 0;padding:0;max-width:980px;counter-reset:s}
+.sell-page .timeline li{position:relative;display:grid;grid-template-columns:70px 1fr;gap:20px;padding:26px 0;border-bottom:1px solid #cad3d3}
+.sell-page .timeline li:first-child{border-top:1px solid #cad3d3}
+.sell-page .timeline li::before{counter-increment:s;content:"0" counter(s);color:var(--teal);font-family:Georgia,serif;font-size:30px}
+.sell-page .timeline h3{margin:0 0 8px;font-size:25px}
+.sell-page .timeline p{margin:0;color:var(--muted);line-height:1.7}
+.sell-page .cities{padding:90px clamp(28px,8vw,130px);background:#fff;display:grid;grid-template-columns:1fr 1.3fr;gap:60px;align-items:center}
+.sell-page .cities h2{margin:0;font-size:clamp(34px,4vw,50px);line-height:1.1}
+.sell-page .cities p{color:var(--muted);font-size:17px;line-height:1.7}
+.sell-page .city-links{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #cad3d3}
+.sell-page .city-links a{display:flex;justify-content:space-between;padding:18px 4px;border-bottom:1px solid #cad3d3;font-weight:700;color:var(--navy)}
+.sell-page .city-links a:nth-child(odd){margin-right:26px}
+.sell-page .city-links a span{color:var(--gold)}
+.sell-page .faq{padding:120px clamp(28px,8vw,130px);background:#fff;border-top:1px solid var(--line)}
+.sell-page .faq-list{max-width:980px;margin-top:46px;border-top:1px solid #cad3d3}
+.sell-page .faq-list details{border-bottom:1px solid #cad3d3}
+.sell-page .faq-list summary{list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:26px 4px;cursor:pointer;color:var(--navy);font-family:Georgia,serif;font-size:24px}
+.sell-page .faq-list summary::-webkit-details-marker{display:none}
+.sell-page .faq-list summary::after{content:"";width:9px;height:9px;flex:0 0 auto;margin-right:7px;border-right:2px solid var(--teal);border-bottom:2px solid var(--teal);transform:rotate(45deg) translateY(-3px)}
+.sell-page .faq-list details[open] summary::after{border-color:var(--gold);transform:rotate(225deg)}
+.sell-page .faq-list details>div{padding:0 4px 26px;color:var(--muted);font-size:17px;line-height:1.75;max-width:820px}
+.sell-page .faq-list details>div p{margin:0 0 12px}
+.sell-page .contact{display:flex;justify-content:space-between;align-items:end;gap:50px;padding:110px clamp(28px,8vw,130px);background:var(--teal);color:#fff}
+.sell-page .contact h2{margin:0;color:#fff;font-size:clamp(40px,5vw,64px);line-height:1.08}
+.sell-page .contact p{max-width:620px;line-height:1.7;font-size:17px}
+.sell-page .contact .eyebrow{color:#fff;opacity:.85}
+.sell-page .cta-actions{display:flex;flex-direction:column;gap:14px;align-items:stretch;flex:0 0 auto}
+.sell-page .button-outline-light{border:1px solid #fff;color:#fff;background:transparent}
+@media(max-width:900px){.sell-page .seller-hero{grid-template-columns:1fr;gap:44px;padding:64px 22px}
+.sell-page .steps,.sell-page .why-grid,.sell-page .why-list,.sell-page .cities{grid-template-columns:1fr}
+.sell-page .why-photo{max-width:420px;aspect-ratio:1/1}
+.sell-page .contact{flex-direction:column;align-items:flex-start}}
+@media(max-width:600px){
+.sell-page .seller-hero h1{font-size:42px}
+.sell-page .hero-lede{font-size:17px}
+.sell-page .value-form{padding:26px 18px;margin:0 -4px}
+.sell-page .form-row{grid-template-columns:1fr}
+.sell-page .value-form .button{width:100%}
+.sell-page .how,.sell-page .process,.sell-page .faq{padding:78px 22px}
+.sell-page .why{padding:78px 22px}
+.sell-page .cities{padding:70px 22px}
+.sell-page .steps article{padding:28px 24px}
+.sell-page .why-list article{padding:28px 24px}
+.sell-page .timeline li{grid-template-columns:48px 1fr;gap:12px}
+.sell-page .timeline li::before{font-size:24px}
+.sell-page .city-links{grid-template-columns:1fr}
+.sell-page .city-links a:nth-child(odd){margin-right:0}
+.sell-page .faq-list summary{font-size:21px}
+.sell-page .contact{padding:78px 22px}
+.sell-page .cta-actions{width:100%}
+.sell-page .contact .button{width:100%}
+}
+
+.sell-page .source-note{display:block;margin-top:6px;font-size:12px;line-height:1.45;color:#6b6b6b}
+.sell-page .source-note a{text-decoration:underline}
+.sell-page .value-form textarea{resize:vertical}
+.sell-page .value-form button:disabled{cursor:not-allowed;opacity:.62}
+
+.sell-page .form-status.success{color:#23725c}
+.sell-page .form-status.error{color:#9a3c35}

@@ -1,11 +1,12 @@
 "use client";
 
-import { FormEvent, useRef, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 
-const inquiryEndpoint = "https://salt-light-crm--salt-light-private-crm.us-central1.hosted.app/api/public/website-inquiry";
+import { inquiryEndpoint } from "../../inquiry-endpoint";
 
 export default function ContactForm() {
-  const startedAt = useRef(Date.now());
+  const startedAt = useRef(0);
+  useEffect(() => { startedAt.current = Date.now(); }, []);
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
 

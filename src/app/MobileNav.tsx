@@ -6,9 +6,12 @@ import { useEffect, useState } from "react";
 
 export default function MobileNav() {
   const pathname = usePathname();
+  return <Navigation key={pathname} pathname={pathname} />;
+}
+
+function Navigation({ pathname }: { pathname: string }) {
   const [open, setOpen] = useState(false);
 
-  useEffect(() => setOpen(false), [pathname]);
   useEffect(() => {
     document.body.classList.toggle("mobile-menu-open", open);
     return () => document.body.classList.remove("mobile-menu-open");
@@ -21,10 +24,11 @@ export default function MobileNav() {
       <span /><span /><span />
     </button>
     <div className={`mobile-menu ${open ? "is-open" : ""}`} id="mobile-menu" aria-hidden={!open}>
-      <nav aria-label="Mobile navigation">
+      <nav aria-label="Mobile navigation" onClick={() => setOpen(false)}>
         <Link href="/">Home</Link>
+        <Link href="/articles/buyer-roadmap">Buyer guide</Link>
+        <Link href="/sell/">Sell your home</Link>
         <Link href="/articles">Guides &amp; insights</Link>
-        <Link href="/articles/buyer-roadmap">Buyer roadmap</Link>
         <Link href="/#service-areas">The 7 Cities</Link>
         <Link href="/contact">Contact Emmanuel</Link>
       </nav>
