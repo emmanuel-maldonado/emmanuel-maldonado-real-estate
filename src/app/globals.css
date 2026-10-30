@@ -37,4 +37,7 @@
 
 .brokerage-disclosure{display:block;max-width:100%;font-size:11px;font-weight:400;line-height:1.6;opacity:.75}.card-disclosure{margin:24px auto 0;max-width:440px;padding:16px 20px;text-align:center}
 
-@media(min-width:821px) and (max-width:1439px){.site-header>.brand{position:static;transform:none;text-align:left;margin-right:auto}.site-header{gap:18px}.site-header nav{gap:14px}}
+
+@media(min-width:821px) and (max-width:1439px){.site-header nav{gap:12px;font-size:12px}}
+.eho{display:flex;align-items:center;gap:10px}.eho svg{flex:0 0 auto}
+.site-footer .footer-bottom{align-items:center;flex-wrap:wrap}

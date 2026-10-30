@@ -43,7 +43,7 @@ export default function HomeValueForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...Object.fromEntries(fields.entries()), name, email, phone, propertyAddress, timeline, note,
           interest: "Selling a home",
-          message: `Home value request. Property address: ${propertyAddress}. Timeline: ${timeline}. Note: ${note || "none"}`,
+          message: `Home value request. Property address: ${propertyAddress}. Timeline: ${timeline || "not specified"}. Note: ${note || "none"}`,
           startedAt: startedAt.current }),
       });
       const result = await response.json().catch(() => ({}));

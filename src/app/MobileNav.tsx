@@ -26,9 +26,9 @@ function Navigation({ pathname }: { pathname: string }) {
     <div className={`mobile-menu ${open ? "is-open" : ""}`} id="mobile-menu" aria-hidden={!open}>
       <nav aria-label="Mobile navigation" onClick={() => setOpen(false)}>
         <Link href="/">Home</Link>
+        <Link href="/articles/buyer-roadmap">Buyer guide</Link>
         <Link href="/sell/">Sell your home</Link>
         <Link href="/articles">Guides &amp; insights</Link>
-        <Link href="/articles/buyer-roadmap">Buyer roadmap</Link>
         <Link href="/#service-areas">The 7 Cities</Link>
         <Link href="/contact">Contact Emmanuel</Link>
       </nav>
