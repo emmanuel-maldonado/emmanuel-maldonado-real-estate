@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import ScrollReveal from "./ScrollReveal";
-import MobileNav from "./MobileNav";
 
-export const metadata: Metadata = {
+export const baseMetadata: Metadata = {
   metadataBase: new URL("https://saltandlight757.com"),
   title: "Salt & Light Real Estate | Emmanuel Maldonado",
   description: "Hampton Roads real estate guidance centered on relationships from Emmanuel Maldonado of Salt & Light Real Estate.",
@@ -39,10 +36,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
-  return (
-    <html lang="en">
-      <body className="min-h-full flex flex-col"><ScrollReveal />{children}<MobileNav /></body>
-    </html>
-  );
+export function pageMetadata(path: string, title: string, description: string): Metadata {
+  const url = `https://saltandlight757.com${path}`;
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { ...baseMetadata.openGraph, url, title, description },
+    twitter: { ...baseMetadata.twitter, title, description },
+  };
 }

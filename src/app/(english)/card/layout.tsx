@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site-metadata";
 
 export const metadata: Metadata = {
-  title: "Emmanuel Maldonado | Digital Card",
+  ...pageMetadata("/card/", "Emmanuel Maldonado | Digital Card", "Save and share Emmanuel Maldonado’s Salt & Light Real Estate digital card."),
   description: "Save and share Emmanuel Maldonado’s Salt & Light Real Estate digital card.",
   manifest: "/card/manifest.webmanifest",
   icons: {
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://saltandlight757.com/card",
+    url: "https://saltandlight757.com/card/",
     title: "Emmanuel Maldonado | Salt & Light Real Estate",
     description: "Connect with Emmanuel Maldonado for real estate guidance across Hampton Roads.",
     siteName: "Salt & Light Real Estate",

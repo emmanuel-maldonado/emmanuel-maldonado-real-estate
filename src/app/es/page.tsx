@@ -1,11 +1,9 @@
+import { pageMetadata } from "@/lib/site-metadata";
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Bienes Raíces en Hampton Roads | Emmanuel Maldonado",
-  description: "Orientación personal de bienes raíces en español por Emmanuel Maldonado de Salt & Light Real Estate.",
-};
+export const metadata = pageMetadata("/es/", "Bienes Raíces en Hampton Roads | Emmanuel Maldonado", "Orientación personal de bienes raíces en español por Emmanuel Maldonado de Salt & Light Real Estate.");
+
 
 const servicios = [
   ["Comprar con claridad", "Un proceso claro y paciente, basado en sus prioridades, sus finanzas y la realidad de ser propietario."],

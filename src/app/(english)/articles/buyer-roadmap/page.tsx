@@ -1,4 +1,7 @@
+import { pageMetadata } from "@/lib/site-metadata";
 import Link from "next/link";
+
+export const metadata = pageMetadata("/articles/buyer-roadmap/", "Hampton Roads Buyer Roadmap | Emmanuel Maldonado", "Plan your Hampton Roads home purchase with a step-by-step guide to financing, touring, offers, inspections, closing, and support after closing.");
 
 const steps=[
   ["01","Clarify the goal","We start with your timing, priorities, preferred areas, and what you need from your next home."],
