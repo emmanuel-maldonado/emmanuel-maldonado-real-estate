@@ -58,7 +58,7 @@ export default function SellPage() {
       <article><h3>Your local neighbor</h3><p>I live and work in Hampton Roads. I know how location, schools, commutes, and the water shape what buyers here are looking for.</p></article>
       <article><h3>An owner&apos;s eye for condition</h3><p>My property management background means I look at homes the way buyers and inspectors do: maintenance, systems, and the true cost of ownership. That helps you prepare for what buyers will notice.</p></article>
       <article><h3>Bilingual service</h3><p>Every conversation, document review, and update is available in English or Spanish. <span lang="es">Hablo español.</span></p></article>
-      <article><h3>Data-backed pricing</h3><p>I organize recent comparable sales in my own comps system, so you can see exactly which homes the price is based on and why.</p></article>
+      <article><h3>Data-backed pricing</h3><p>I pull recent comparable sales from REIN, our local MLS, so you can see exactly which homes the price is based on and why.</p></article>
     </div>
   </div>
 </section>
