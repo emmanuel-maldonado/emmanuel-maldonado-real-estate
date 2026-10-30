@@ -6,7 +6,7 @@ import SiteFooter from "../../SiteFooter";
 import HomeValueForm from "./HomeValueForm";
 import "./sell.css";
 
-export const metadata = pageMetadata("/sell/", "What's My Home Worth? Sell Your Home in Virginia Beach | Emmanuel Maldonado", "Request a free comparable-sales market analysis for your Hampton Roads home from Emmanuel Maldonado of Salt & Light Real Estate. Call 757-672-6065. Se habla espa\u00f1ol.");
+export const metadata = pageMetadata("/sell/", "What's My Home Worth? Sell Your Home in Virginia Beach | Emmanuel Maldonado", "Request a free comparable-sales market analysis for your Hampton Roads home from Emmanuel Maldonado of Salt & Light Real Estate. Call 757-672-6065. Hablo espa\u00f1ol.");
 
 const faq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is my home worth in Virginia Beach?", "acceptedAnswer": {"@type": "Answer", "text": "A home's value depends on recent comparable sales nearby, its condition, size, updates, and current buyer demand. A comparable-sales market analysis compares your home with similar homes that recently sold near you to estimate a realistic list price range. It is not an appraisal."}}, {"@type": "Question", "name": "How long does it take to sell a house in Virginia Beach?", "acceptedAnswer": {"@type": "Answer", "text": "Timing depends on price, condition, location, season, and how many similar homes are for sale. After you accept an offer, closing usually follows the timeline in the contract, which often depends on the buyer's financing."}}, {"@type": "Question", "name": "What does it cost to sell a house in Virginia?", "acceptedAnswer": {"@type": "Answer", "text": "Common costs include brokerage compensation, which is negotiable, settlement and closing fees, Virginia grantor's tax and other recording costs, payoff of any mortgage, prorated property taxes, and any repairs or credits you agree to. Your net proceeds estimate should list each one."}}, {"@type": "Question", "name": "Do I need to make repairs before selling my house?", "acceptedAnswer": {"@type": "Answer", "text": "Not always. Some sellers make small repairs and touch-ups to widen buyer appeal, others sell as-is and price accordingly. The right choice depends on the repair, its cost, and how it affects value and buyer financing."}}]};
 
@@ -57,7 +57,7 @@ export default function SellPage() {
     <div className="why-list">
       <article><h3>Your local neighbor</h3><p>I live and work in Hampton Roads. I know how location, schools, commutes, and the water shape what buyers here are looking for.</p></article>
       <article><h3>An owner&apos;s eye for condition</h3><p>My property management background means I look at homes the way buyers and inspectors do: maintenance, systems, and the true cost of ownership. That helps you prepare for what buyers will notice.</p></article>
-      <article><h3>Bilingual service</h3><p>Every conversation, document review, and update is available in English or Spanish. <span lang="es">Se habla español.</span></p></article>
+      <article><h3>Bilingual service</h3><p>Every conversation, document review, and update is available in English or Spanish. <span lang="es">Hablo español.</span></p></article>
       <article><h3>Data-backed pricing</h3><p>I organize recent comparable sales in my own comps system, so you can see exactly which homes the price is based on and why.</p></article>
     </div>
   </div>
@@ -119,7 +119,7 @@ export default function SellPage() {
   <div>
     <p className="eyebrow">Begin here</p>
     <h2>Curious what your home could sell for?</h2>
-    <p>No pressure and no assumptions. Call or text, or request your free market analysis, and I will follow up personally. <span lang="es">Se habla español.</span></p>
+    <p>No pressure and no assumptions. Call or text, or request your free market analysis, and I will follow up personally. <span lang="es">Hablo español.</span></p>
   </div>
   <div className="cta-actions">
     <a className="button button-light" href="tel:+17576726065">Call 757-672-6065</a>
