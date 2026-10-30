@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 
 export const baseMetadata: Metadata = {
   metadataBase: new URL("https://saltandlight757.com"),
+  verification: {
+    google: "zRJo91C9Cwq7IDLVUZCp-OXSXKgRI-Zq5Q3wzKeOzfY",
+  },
   title: "Salt & Light Real Estate | Emmanuel Maldonado",
   description: "Hampton Roads real estate guidance centered on relationships from Emmanuel Maldonado of Salt & Light Real Estate.",
   icons: {
