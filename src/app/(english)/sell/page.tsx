@@ -25,7 +25,7 @@ export default function SellPage() {
       <li>Reviewed with you personally, in English or Spanish</li>
       <li>Honest guidance on whether, when, and how to sell</li>
     </ul>
-    <p className="hero-call">Prefer to talk? <a href="tel:+17576726065">757-672-6065</a></p>
+    <p className="hero-call">Prefer to talk? <a href="tel:+17576726065">Call or text Manny at 757-672-6065</a></p>
     <p className="brokerage">Salt &amp; Light Real Estate · Brokered by Rooted Residential</p>
   </div>
 
@@ -122,7 +122,7 @@ export default function SellPage() {
     <p>No pressure and no assumptions. Call or text, or request your free market analysis, and I will follow up personally. <span lang="es">Hablo español.</span></p>
   </div>
   <div className="cta-actions">
-    <a className="button button-light" href="tel:+17576726065">Call 757-672-6065</a>
+    <a className="button button-light" href="tel:+17576726065">Call or text Manny at 757-672-6065</a>
     <a className="button button-outline-light" href="#home-value">Request my home value</a>
   </div>
 </section>

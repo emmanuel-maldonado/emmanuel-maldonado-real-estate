@@ -41,3 +41,5 @@
 @media(min-width:821px) and (max-width:1439px){.site-header nav{gap:12px;font-size:12px}}
 .eho{display:flex;align-items:center;gap:10px}.eho svg{flex:0 0 auto}
 .site-footer .footer-bottom{align-items:center;flex-wrap:wrap}
+.brand em{white-space:nowrap}.name-nowrap{white-space:nowrap}
+@media(max-width:420px){.hero-eyebrow{font-size:11px;letter-spacing:.12em}.brand em{font-size:9.5px;letter-spacing:.05em}}
