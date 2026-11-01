@@ -7,11 +7,11 @@ import "./about.css";
 
 export const metadata = pageMetadata("/about/", "About Emmanuel “Manny” Maldonado | Salt & Light Real Estate", "Meet Emmanuel “Manny” Maldonado, Real Estate Agent & Property Manager with Salt & Light Real Estate in Hampton Roads. Call or text 757-672-6065. Hablo español.");
 
-const ways = [
-  ["Your local neighbor", "I live and work in Hampton Roads. I know how location, schools, commutes, and the water shape what buyers here are looking for."],
-  ["An owner’s eye for condition", "My property management background means I look at homes the way buyers and inspectors do: maintenance, systems, and the true cost of ownership."],
-  ["Bilingual service", "Every conversation, document review, and update is available in English or Spanish."],
-  ["Data-backed pricing", "Your price comes from a comparative market analysis built on recent REIN MLS sales near you, so you’ll see exactly which homes support the number and why."],
+const promises = [
+  ["Honest guidance", "I will tell you what I see, even when it is not what you hoped to hear, and help you weigh your options."],
+  ["Clear communication", "You will know what is next at every stage, and you will hear from me consistently through closing."],
+  ["No pressure", "No pressure and no assumptions. My job is to help you make the right decision for you, on your timeline."],
+  ["English or Spanish", "Every conversation, document review, and update is available in English or Spanish."],
 ];
 
 export default function AboutPage() {
@@ -31,15 +31,46 @@ export default function AboutPage() {
       </section>
 
       <section className="about-story">
-        <p className="eyebrow">A practical perspective on ownership</p>
+        <p className="eyebrow">Hello, I&rsquo;m Manny</p>
         <h2>Real estate decisions deserve time, context, and honest guidance.</h2>
-        <p>Property management has shown me the full lifecycle of a home, from day-to-day care to rental potential and future decisions.</p>
-        <p>I am building Salt &amp; Light around being a useful resource before, during, and after the transaction. I want you to understand the decision in front of you and feel prepared for what comes after it.</p>
+        <p>I help people buy and sell homes in Hampton Roads, and I also work as a property manager. Whether you are buying your first home, selling a place you have loved, or deciding what to do with a property you own, I want you to feel clear, informed, and cared for at every step.</p>
+        <h2 className="about-subhead">My story</h2>
+        <p>I was raised in West Palm Beach, Florida. College took me to Maryland and South Carolina. At Columbia International University, I studied business administration and played baseball.</p>
+        <p>Baseball taught me a lot about competing and about working well with others, and both lessons show up in my work every day. Columbia International is also where I met my wife.</p>
+        <p>Since I graduated college, I have worked in property management. Those years have shown me the full lifecycle of a home, from day-to-day care to rental potential and future decisions. Today I bring that experience to helping people buy and sell homes across Hampton Roads.</p>
+        <p>Living in Virginia Beach, I am also learning quickly about our military community and what matters to those who serve here.</p>
+      </section>
+
+      <section className="about-pm">
+        <div className="about-pm-inner">
+          <p className="eyebrow">An owner&rsquo;s eye</p>
+          <h2>Why property management makes me a better agent.</h2>
+          <ul>
+            <li>I look at homes the way buyers and inspectors do: maintenance, systems, and the true cost of ownership.</li>
+            <li>For sellers, that helps you prepare for what buyers will notice. For buyers, it helps you understand what a home will take to care for after you move in.</li>
+            <li>I live and work in Hampton Roads, and I know how location, schools, commutes, and the water shape what buyers here are looking for.</li>
+            <li>Pricing comes from a comparative market analysis built on recent REIN MLS sales near you, so you&rsquo;ll see exactly which homes support the number and why.</li>
+          </ul>
+        </div>
       </section>
 
       <section className="about-ways">
-        <div className="about-section-head"><p className="eyebrow">How I work</p><h2>Practical, local, and personal.</h2></div>
-        <div className="about-ways-grid">{ways.map(([title, copy]) => <article key={title}><h3>{title}</h3><p>{copy}{title === "Bilingual service" ? <> <span lang="es">Hablo español.</span></> : null}</p></article>)}</div>
+        <div className="about-section-head"><p className="eyebrow">How I work</p><h2>Serving you well.</h2></div>
+        <div className="about-ways-grid">{promises.map(([title, copy]) => <article key={title}><h3>{title}</h3><p>{copy}{title === "English or Spanish" ? <> <span lang="es">Hablo español.</span></> : null}</p></article>)}</div>
+      </section>
+
+      <section className="about-personal">
+        <aside className="about-salt" aria-labelledby="why-salt-light">
+          <p className="eyebrow">Why Salt &amp; Light?</p>
+          <h2 id="why-salt-light">A name with a reason behind it.</h2>
+          <p>The name comes from Jesus&rsquo; words in <span className="name-nowrap">Matthew 5:13-16</span>, where he calls his followers the salt of the earth and the light of the world, and encourages them to let their light shine through good work. For me, that means loving God, loving people, and serving people well: honest work, done in the open, that leaves things better than I found them.</p>
+          <p className="about-salt-welcome">My faith shapes how I work, not who I work with. Whatever you believe, you will get the same respect, honesty, and effort from me.</p>
+        </aside>
+        <div className="about-outside">
+          <p className="eyebrow">Outside of work</p>
+          <h2>A little more about me.</h2>
+          <p>When I am not working, I love spending time with my wife and family. I am involved in my local church, and I try to stay active with fitness and pickleball. You will also find me at the beach or enjoying a good espresso.</p>
+        </div>
       </section>
 
       <section className="about-help">
