@@ -11,7 +11,6 @@ const promises = [
   ["Honest guidance", "I will tell you what I see, even when it is not what you hoped to hear, and help you weigh your options."],
   ["Clear communication", "You will know what is next at every stage, and you will hear from me consistently through closing."],
   ["No pressure", "No pressure and no assumptions. My job is to help you make the right decision for you, on your timeline."],
-  ["English or Spanish", "Every conversation, document review, and update is available in English or Spanish."],
 ];
 
 export default function AboutPage() {
@@ -35,10 +34,11 @@ export default function AboutPage() {
         <h2>Real estate decisions deserve time, context, and honest guidance.</h2>
         <p>I help people buy and sell homes in Hampton Roads, and I also work as a property manager. Whether you are buying your first home, selling a place you have loved, or deciding what to do with a property you own, I want you to feel clear, informed, and cared for at every step.</p>
         <h2 className="about-subhead">My story</h2>
-        <p>I grew up in West Palm Beach, Florida. College took me to both Maryland and South Carolina, and at Columbia International University I studied business administration while playing baseball.</p>
-        <p>Baseball taught me how to compete and how to be a good teammate: show up prepared, do your part, and trust the people around you. Those lessons carry straight into real estate, where a good outcome depends on everyone working well together. Columbia International gave me more than a degree and a spot on the team, too. It is where I met my wife.</p>
-        <p>Since graduating, I have worked in property management. Caring for homes on behalf of their owners has taught me to see a property in full: what it takes to maintain, how it performs as a rental, and the bigger decisions owners eventually face. It has also taught me that behind every property is a person with real goals and real concerns. Today I bring that perspective to helping people buy and sell homes across Hampton Roads, so you can make decisions with a clear picture of what a home really involves.</p>
-        <p>Virginia Beach is home now, and I am learning quickly about this community, including the many military families who serve here and what matters to them. Through every chapter, my faith has been the steady thread: loving God, loving people, and serving people well. That is the standard I try to hold myself to, in my work and everywhere else.</p>
+        <p>I grew up in West Palm Beach, Florida, where baseball was a big part of my life from an early age. As I got older, I also spent time helping my parents with their business, Lion Ink Print, which played an important role in developing my work ethic.</p>
+        <p>Baseball eventually took me to college in Maryland and South Carolina, where I studied Business Administration and played at Columbia International University. Along the way, I further developed my discipline, leadership, and appreciation for teamwork—qualities I carry into my career today. It was also at Columbia International that I met my wife.</p>
+        <p>After graduating, I began my career in property management, gaining firsthand experience caring for homes, working with property owners, and understanding real estate beyond the transaction. That experience gives me a valuable perspective when helping clients buy, sell, or invest in real estate.</p>
+        <p>Today, I&rsquo;m proud to call Virginia Beach home and serve clients throughout Hampton Roads. My goal is simple: to provide honest guidance, clear communication, and a level of service my clients can trust.</p>
+        <p>Above all, my faith shapes how I approach life and business: loving God, loving people, and serving others with integrity.</p>
       </section>
 
       <section className="about-pm">
@@ -56,7 +56,7 @@ export default function AboutPage() {
 
       <section className="about-ways">
         <div className="about-section-head"><p className="eyebrow">How I work</p><h2>Serving you well.</h2></div>
-        <div className="about-ways-grid">{promises.map(([title, copy]) => <article key={title}><h3>{title}</h3><p>{copy}{title === "English or Spanish" ? <> <span lang="es">Hablo español.</span></> : null}</p></article>)}</div>
+        <div className="about-ways-grid">{promises.map(([title, copy]) => <article key={title}><h3>{title}</h3><p>{copy}</p></article>)}</div>
       </section>
 
       <section className="about-personal">
@@ -67,9 +67,9 @@ export default function AboutPage() {
           <p className="about-salt-welcome">My faith shapes how I work, not who I work with. Whatever you believe, you will get the same respect, honesty, and effort from me.</p>
         </aside>
         <div className="about-outside">
-          <p className="eyebrow">Outside of work</p>
+          <p className="eyebrow">Outside of Work</p>
           <h2>A little more about me.</h2>
-          <p>Away from work, my life centers on my wife and family and on our church, where I am glad to be involved. Some of my favorite days are simply time with family at the beach. I try to stay active with fitness and a good game of pickleball, and I am big into making espresso, so I am always happy to talk coffee.</p>
+          <p>Outside of real estate, I enjoy spending time with my wife and family, serving at our local church, and staying active through weightlifting and pickleball. You&rsquo;ll also find me enjoying the beach or making a good espresso at home.</p>
         </div>
       </section>
 
