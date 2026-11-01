@@ -74,15 +74,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="about-help">
-        <div className="about-section-head"><p className="eyebrow">Buying · Selling · Ownership</p><h2>How I can help you.</h2></div>
-        <div className="about-help-grid">
-          <article><h3>Buying a home</h3><p>Understand your options, prepare for the process, and make decisions that fit your life and finances.</p><Link className="text-link" href="/articles/buyer-roadmap/">Read the Hampton Roads Buyer Roadmap <span>→</span></Link></article>
-          <article><h3>Selling a home</h3><p>Prepare and position your property with a clear plan and consistent communication through closing.</p><Link className="text-link" href="/sell/">Get a free market analysis <span>→</span></Link></article>
-          <article><h3>Planning for ownership</h3><p>Get practical perspective on maintenance, rental readiness, and whether selling or renting makes sense.</p><Link className="text-link" href="/card">Save my digital card <span>→</span></Link></article>
-        </div>
-      </section>
-
       <section className="contact" id="contact">
         <div><p className="eyebrow">Begin here</p><h2>Let&rsquo;s start the conversation.</h2><p>No pressure and no assumptions. Share what is on your mind, and I will follow up personally. <span lang="es">Hablo español.</span></p></div>
         <div className="about-cta-actions"><a className="button button-light" href="tel:+17576726065">Call or text Manny at 757-672-6065</a><Link className="button about-button-outline" href="/contact">Contact Emmanuel</Link></div>
