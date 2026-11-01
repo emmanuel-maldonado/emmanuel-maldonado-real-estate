@@ -67,7 +67,7 @@ export default function AboutPage() {
           <p className="about-salt-welcome">My faith shapes how I work, not who I work with. Whatever you believe, you will get the same respect, honesty, and effort from me.</p>
         </aside>
         <div className="about-outside">
-          <Image className="about-outside-photo" src="/images/about/manny-and-wife.jpg" alt="Manny and his wife at the beach" width={960} height={1200} loading="lazy" sizes="(max-width: 820px) 100vw, 420px" />
+          <Image className="about-outside-photo" src="/images/about/manny-and-wife.jpg" alt="Manny and his wife at the beach" width={1200} height={1200} loading="lazy" sizes="(max-width: 820px) 100vw, 480px" />
           <p className="eyebrow">Outside of Work</p>
           <h2>A little more about me.</h2>
           <p>Outside of real estate, I enjoy spending time with my wife and family, serving at our local church, and staying active through weightlifting and pickleball. You&rsquo;ll also find me enjoying the beach or making a good espresso at home.</p>

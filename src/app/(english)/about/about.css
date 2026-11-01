@@ -35,6 +35,6 @@
 .about-page .about-salt{padding:38px;background:var(--sand);border-left:4px solid #c9973a}
 .about-page .about-personal .about-salt p.about-salt-welcome{color:var(--navy);font-weight:700;margin:0}
 .about-page .about-outside{padding-top:38px}
-.about-page .about-outside-photo{display:block;width:100%;max-width:420px;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:10px;margin:0 0 32px;background:#e8e1d2}
+.about-page .about-outside-photo{display:block;width:100%;max-width:480px;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:10px;margin:0 0 32px;background:#e8e1d2}
 @media(max-width:1100px){.about-page .about-ways-grid article{padding:6px 22px 0}.about-page .about-ways-grid article:first-child{padding-left:0}.about-page .about-ways h3{font-size:23px}}
 @media(max-width:820px){.about-page .about-hero{grid-template-columns:1fr;padding:48px 24px 70px;gap:34px}.about-page .about-hero-photo{max-width:none;aspect-ratio:1/1}.about-page .about-story{padding:80px 24px 70px}.about-page .about-ways{padding:80px 24px}.about-page .about-ways-grid,.about-page .about-personal{grid-template-columns:1fr}.about-page .about-pm{padding:80px 24px}.about-page .about-personal{padding:80px 24px 20px;gap:50px}.about-page .about-salt{padding:28px 24px}.about-page .about-outside{padding-top:0}.about-page .about-ways-grid article{border-left:0;border-top:1px solid #345064;padding:28px 0 0}.about-page .about-ways-grid article:first-child{border-top:0;padding-top:0}.about-page .about-cta-actions{width:100%;flex-direction:column}}
