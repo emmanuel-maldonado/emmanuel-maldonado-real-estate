@@ -35,10 +35,10 @@ export default function AboutPage() {
         <h2>Real estate decisions deserve time, context, and honest guidance.</h2>
         <p>I help people buy and sell homes in Hampton Roads, and I also work as a property manager. Whether you are buying your first home, selling a place you have loved, or deciding what to do with a property you own, I want you to feel clear, informed, and cared for at every step.</p>
         <h2 className="about-subhead">My story</h2>
-        <p>I was raised in West Palm Beach, Florida. College took me to Maryland and South Carolina. At Columbia International University, I studied business administration and played baseball.</p>
-        <p>Baseball taught me a lot about competing and about working well with others, and both lessons show up in my work every day. Columbia International is also where I met my wife.</p>
-        <p>Since I graduated college, I have worked in property management. Those years have shown me the full lifecycle of a home, from day-to-day care to rental potential and future decisions. Today I bring that experience to helping people buy and sell homes across Hampton Roads.</p>
-        <p>Living in Virginia Beach, I am also learning quickly about our military community and what matters to those who serve here.</p>
+        <p>I grew up in West Palm Beach, Florida. College took me to both Maryland and South Carolina, and at Columbia International University I studied business administration while playing baseball.</p>
+        <p>Baseball taught me how to compete and how to be a good teammate: show up prepared, do your part, and trust the people around you. Those lessons carry straight into real estate, where a good outcome depends on everyone working well together. Columbia International gave me more than a degree and a spot on the team, too. It is where I met my wife.</p>
+        <p>Since graduating, I have worked in property management. Caring for homes on behalf of their owners has taught me to see a property in full: what it takes to maintain, how it performs as a rental, and the bigger decisions owners eventually face. It has also taught me that behind every property is a person with real goals and real concerns. Today I bring that perspective to helping people buy and sell homes across Hampton Roads, so you can make decisions with a clear picture of what a home really involves.</p>
+        <p>Virginia Beach is home now, and I am learning quickly about this community, including the many military families who serve here and what matters to them. Through every chapter, my faith has been the steady thread: loving God, loving people, and serving people well. That is the standard I try to hold myself to, in my work and everywhere else.</p>
       </section>
 
       <section className="about-pm">
@@ -69,7 +69,7 @@ export default function AboutPage() {
         <div className="about-outside">
           <p className="eyebrow">Outside of work</p>
           <h2>A little more about me.</h2>
-          <p>When I am not working, I love spending time with my wife and family. I am involved in my local church, and I try to stay active with fitness and pickleball. You will also find me at the beach or enjoying a good espresso.</p>
+          <p>Away from work, my life centers on my wife and family and on our church, where I am glad to be involved. Some of my favorite days are simply time with family at the beach. I try to stay active with fitness and a good game of pickleball, and I am big into making espresso, so I am always happy to talk coffee.</p>
         </div>
       </section>
 
