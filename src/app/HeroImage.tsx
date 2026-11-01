@@ -6,13 +6,13 @@ const srcSet = [640, 960, 1280, 1920]
 export default function HeroImage() {
   return (
     <>
-      <link rel="preload" as="image" imageSrcSet={srcSet} imageSizes="100vw" />
+      <link rel="preload" as="image" imageSrcSet={srcSet} imageSizes="(min-width: 821px) 150vw, 100vw" />
       {/* Native srcSet preserves responsive selection with Next's static export. */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/images/first-landing-shoreline-1280.webp"
         srcSet={srcSet}
-        sizes="100vw"
+        sizes="(min-width: 821px) 150vw, 100vw"
         alt="Chesapeake Bay shoreline at First Landing State Park in Virginia Beach"
         width={3872}
         height={2592}
