@@ -43,3 +43,4 @@
 .site-footer .footer-bottom{align-items:center;flex-wrap:wrap}
 .brand em{white-space:nowrap}.name-nowrap{white-space:nowrap}
 @media(max-width:420px){.hero-eyebrow{font-size:11px;letter-spacing:.12em}.brand em{font-size:9.5px;letter-spacing:.05em}}
+@media(min-width:821px){html{scroll-padding-top:108px}.site-header{position:sticky;top:0;z-index:50}@supports(animation-timeline:scroll()){.site-header{animation:site-header-scrolled linear both;animation-timeline:scroll(root);animation-range:0 120px}}}@keyframes site-header-scrolled{to{box-shadow:0 6px 22px rgba(8,29,45,.1)}}
