@@ -18,7 +18,7 @@ export default function AboutPage() {
     <SiteHeader />
     <main className="about-page">
       <section className="about-hero">
-        <div className="about-hero-photo"><Image src="/images/emmanuel-maldonado.jpg" alt="Emmanuel “Manny” Maldonado" fill priority sizes="(max-width: 820px) 100vw, 40vw" /></div>
+        <div className="about-hero-photo"><Image src="/images/emmanuel-maldonado-headshot.jpg" alt="Emmanuel “Manny” Maldonado" fill priority sizes="(max-width: 820px) 100vw, 40vw" /></div>
         <div className="about-hero-copy">
           <p className="eyebrow">About Emmanuel</p>
           <h1>Meet Emmanuel &ldquo;Manny&rdquo; Maldonado</h1>

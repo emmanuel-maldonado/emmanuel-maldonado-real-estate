@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "Salt & Light Real Estate",
     images: [
       {
-        url: "/images/social-share-emmanuel.png",
+        url: "/images/social-share-emmanuel-headshot.jpg",
         width: 1731,
         height: 909,
         alt: "Emmanuel Maldonado on the Hampton Roads shoreline",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Emmanuel Maldonado | Salt & Light Real Estate",
     description: "Connect with Emmanuel Maldonado for real estate guidance across Hampton Roads.",
-    images: ["/images/social-share-emmanuel.png"],
+    images: ["/images/social-share-emmanuel-headshot.jpg"],
   },
 };
 

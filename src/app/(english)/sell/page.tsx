@@ -53,7 +53,7 @@ export default function SellPage() {
     <p>Selling is a big decision. You deserve someone who explains the options and treats your home like it matters.</p>
   </div>
   <div className="why-grid">
-    <div className="why-photo"><Image src="/images/emmanuel-maldonado.jpg" alt="Emmanuel Maldonado" width={900} height={1125} /></div>
+    <div className="why-photo"><Image src="/images/emmanuel-maldonado-headshot.jpg" alt="Emmanuel Maldonado" width={764} height={1024} /></div>
     <div className="why-list">
       <article><h3>Your local neighbor</h3><p>I live and work in Hampton Roads. I know how location, schools, commutes, and the water shape what buyers here are looking for.</p></article>
       <article><h3>An owner&apos;s eye for condition</h3><p>My property management background means I look at homes the way buyers and inspectors do: maintenance, systems, and the true cost of ownership. That helps you prepare for what buyers will notice.</p></article>
