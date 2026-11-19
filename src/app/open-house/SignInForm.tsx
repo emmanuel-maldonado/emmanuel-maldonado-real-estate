@@ -166,7 +166,7 @@ export default function SignInForm({ slug, street }: { slug: string; street: str
       <footer className="oh-foot">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className="oh-hs" src="/open-house/manny-headshot-160.webp" width={62} height={62} alt="Emmanuel Maldonado" />
-        <div className="oh-who"><b>Emmanuel &quot;Manny&quot; Maldonado</b><br />Real Estate Agent &amp; Property Manager · Call or text 757-672-6065<br /><span className="oh-es">Y también hablo español</span></div>
+        <div className="oh-who"><b>Emmanuel &quot;Manny&quot; Maldonado</b><br />Real Estate Agent &amp; Property Manager · Call or text <a className="oh-nowrap oh-tel" href="tel:+17576726065">757-672-6065</a><br /><span className="oh-es">Y también hablo español</span></div>
         <div className="oh-logo" onMouseDown={startHold} onTouchStart={startHold} onMouseUp={endHold} onMouseLeave={endHold} onTouchEnd={endHold} onTouchCancel={endHold}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/open-house/salt-light-logo-white-240.png" width={62} height={58} alt="Salt &amp; Light Real Estate" draggable={false} />

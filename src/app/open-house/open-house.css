@@ -4,16 +4,16 @@
 .oh-body{--navy:#081d2d;--gold:#c9942d;--cream:#faf7f0;--ink:#1d2a36;margin:0;min-height:100vh;background:var(--navy);color:#fff;font-family:"OH Sans",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-text-size-adjust:100%}
 .oh-body *{box-sizing:border-box}
 .oh-page{display:flex;flex-direction:column;min-height:100vh}
-.oh-hero{position:relative;background:var(--navy);overflow:hidden;height:min(70vw,360px)}
-.oh-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
-.oh-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,29,45,0) 35%,rgba(8,29,45,.92) 88%)}
+.oh-hero{position:relative;background:var(--navy);overflow:hidden;height:min(86vw,460px)}
+.oh-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 62%}
+.oh-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,29,45,0) 55%,rgba(8,29,45,.95) 90%)}
 .oh-cap{position:absolute;z-index:1;left:0;right:0;bottom:14px;text-align:center;padding:0 16px}
 .oh-cap h1{font-family:"OH Serif",Georgia,serif;font-weight:400;font-size:40px;margin:0;line-height:1}
 .oh-rule{height:3px;background:var(--gold);width:64%;max-width:420px;margin:8px auto}
 .oh-when{font-weight:600;letter-spacing:.06em;font-size:14px;text-transform:uppercase}
 .oh-addr{opacity:.9;font-size:13.5px}
 .oh-panel{flex:1;background:var(--cream);color:var(--ink);padding:24px 20px 28px;display:flex;flex-direction:column}
-.oh-panel h2{font-family:"OH Serif",Georgia,serif;font-weight:400;color:var(--navy);font-size:32px;line-height:1.1;margin:0}
+.oh-panel h2{font-family:"OH Serif",Georgia,serif;font-weight:400;color:var(--navy);font-size:29px;line-height:1.1;margin:0}
 .oh-sub{color:#4a5a68;margin:.3em 0 .8em;font-size:15px}
 .oh-panel label,.oh-panel legend{display:block;font-weight:600;color:var(--navy);font-size:15px;margin:12px 0 5px;padding:0}
 .oh-req{color:#b4462e}
@@ -36,6 +36,8 @@
 .oh-foot{display:flex;align-items:center;gap:12px;margin-top:22px;padding-top:14px;border-top:2px solid #e7dfcd}
 .oh-hs{width:56px;height:56px;border-radius:50%;flex:none}
 .oh-who{font-size:13px;line-height:1.4;flex:1}.oh-who b{color:var(--navy);font-size:15px}
+.oh-nowrap{white-space:nowrap}
+.oh-tel{color:inherit;text-decoration:none}
 .oh-es{color:var(--gold);font-style:italic}
 .oh-logo{background:var(--navy);border-radius:10px;padding:5px 8px;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;flex:none}
 .oh-logo img{height:50px;width:auto;display:block;pointer-events:none}
