@@ -7,6 +7,25 @@
       "**/node_modules/**"
     ],
     "cleanUrls": true,
-    "trailingSlash": true
+    "trailingSlash": true,
+    "headers": [
+      {
+        "source": "/open-house/**",
+        "headers": [
+          {
+            "key": "X-Robots-Tag",
+            "value": "noindex, nofollow"
+          },
+          {
+            "key": "Referrer-Policy",
+            "value": "no-referrer"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      }
+    ]
   }
 }

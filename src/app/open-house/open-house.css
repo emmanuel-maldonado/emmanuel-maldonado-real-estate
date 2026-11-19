@@ -1,0 +1,72 @@
+@font-face{font-family:"OH Serif";src:url("/fonts/open-house/dm-serif-display.woff2") format("woff2");font-display:swap}
+@font-face{font-family:"OH Sans";font-weight:400;src:url("/fonts/open-house/poppins-400.woff2") format("woff2");font-display:swap}
+@font-face{font-family:"OH Sans";font-weight:600;src:url("/fonts/open-house/poppins-600.woff2") format("woff2");font-display:swap}
+.oh-body{--navy:#081d2d;--gold:#c9942d;--cream:#faf7f0;--ink:#1d2a36;margin:0;min-height:100vh;background:var(--navy);color:#fff;font-family:"OH Sans",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-text-size-adjust:100%}
+.oh-body *{box-sizing:border-box}
+.oh-page{display:flex;flex-direction:column;min-height:100vh}
+.oh-hero{position:relative;background:var(--navy);overflow:hidden;height:min(86vw,460px)}
+.oh-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 62%}
+.oh-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,29,45,0) 55%,rgba(8,29,45,.95) 90%)}
+.oh-cap{position:absolute;z-index:1;left:0;right:0;bottom:14px;text-align:center;padding:0 16px}
+.oh-cap h1{font-family:"OH Serif",Georgia,serif;font-weight:400;font-size:40px;margin:0;line-height:1}
+.oh-rule{height:3px;background:var(--gold);width:64%;max-width:420px;margin:8px auto}
+.oh-when{font-weight:600;letter-spacing:.06em;font-size:14px;text-transform:uppercase}
+.oh-addr{opacity:.9;font-size:13.5px}
+.oh-panel{flex:1;background:var(--cream);color:var(--ink);padding:24px 20px 28px;display:flex;flex-direction:column}
+.oh-panel h2{font-family:"OH Serif",Georgia,serif;font-weight:400;color:var(--navy);font-size:29px;line-height:1.1;margin:0}
+.oh-sub{color:#4a5a68;margin:.3em 0 .8em;font-size:15px}
+.oh-panel label,.oh-panel legend{display:block;font-weight:600;color:var(--navy);font-size:15px;margin:12px 0 5px;padding:0}
+.oh-req{color:#b4462e}
+.oh-panel input[type=text],.oh-panel input[type=tel],.oh-panel input[type=email],.oh-panel select{width:100%;font:inherit;font-size:18px;padding:12px 14px;border:2px solid #d9cfba;border-radius:10px;background:#fff;color:var(--ink);-webkit-appearance:none;appearance:none}
+.oh-panel select{background-image:linear-gradient(45deg,transparent 50%,#4a5a68 50%),linear-gradient(135deg,#4a5a68 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat;padding-right:36px}
+.oh-panel input:focus,.oh-panel select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,148,45,.25)}
+.oh-row{display:flex;flex-direction:column;gap:0}
+.oh-fieldset{border:0;margin:0;padding:0;min-width:0}
+.oh-yn{display:flex;gap:10px}
+.oh-yn label{margin:0;flex:1;border:2px solid #d9cfba;border-radius:10px;padding:11px;text-align:center;background:#fff;cursor:pointer;font-size:17px;position:relative}
+.oh-yn input{position:absolute;opacity:0;pointer-events:none}
+.oh-yn label.is-on{background:var(--navy);border-color:var(--navy);color:#fff}
+.oh-yn label:focus-within{box-shadow:0 0 0 3px rgba(201,148,45,.35)}
+.oh-trap{position:absolute!important;left:-10000px;width:1px;height:1px;overflow:hidden}
+.oh-consent{font-size:13.5px;color:#4a5a68;margin:16px 0 6px;font-style:italic}
+.oh-err{color:#b4462e;font-size:14px;min-height:18px;margin-top:2px}
+.oh-go{width:100%;font:inherit;font-weight:600;font-size:21px;padding:15px;border:0;border-radius:12px;background:var(--gold);color:var(--navy);cursor:pointer;margin-top:6px}
+.oh-go:disabled{opacity:.7;cursor:wait}
+.oh-go:active{transform:translateY(1px)}
+.oh-foot{display:flex;align-items:center;gap:12px;margin-top:22px;padding-top:14px;border-top:2px solid #e7dfcd}
+.oh-hs{width:56px;height:56px;border-radius:50%;flex:none}
+.oh-who{font-size:13px;line-height:1.4;flex:1}.oh-who b{color:var(--navy);font-size:15px}
+.oh-nowrap{white-space:nowrap}
+.oh-tel{color:inherit;text-decoration:none}
+.oh-es{color:var(--gold);font-style:italic}
+.oh-logo{background:var(--navy);border-radius:10px;padding:5px 8px;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;flex:none}
+.oh-logo img{height:50px;width:auto;display:block;pointer-events:none}
+.oh-disc{font-size:11px;color:#6b7782;margin-top:10px;line-height:1.45}
+.oh-hostlink{align-self:flex-start;margin-top:14px;font:inherit;font-size:13px;background:none;border:1px solid #c9bfa8;border-radius:8px;color:#4a5a68;padding:6px 12px;cursor:pointer}
+.oh-thanks{position:fixed;inset:0;background:var(--navy);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;z-index:5;padding:24px}
+.oh-thanks h1{font-family:"OH Serif",Georgia,serif;font-weight:400;font-size:clamp(42px,7vw,110px);line-height:1.05;margin:0}
+.oh-thanks .oh-rule{height:4px;width:40vw;margin:2vh 0}
+.oh-thanks p{font-size:clamp(18px,2vw,28px);margin:.3em}
+.oh-gracias{color:var(--gold);font-style:italic}
+.oh-admin{position:fixed;inset:0;background:rgba(8,29,45,.97);z-index:9;padding:4vh 5vw;overflow:auto;color:#fff}
+.oh-admin h3{font-family:"OH Serif",Georgia,serif;font-weight:400;font-size:34px;margin:0 0 6px}
+.oh-admin p{margin:4px 0}.oh-admin-note{opacity:.8;font-size:14px}
+.oh-btns button{font:inherit;font-weight:600;padding:10px 18px;border-radius:10px;border:0;margin:8px 8px 8px 0;cursor:pointer}
+.oh-btns .gold{background:var(--gold);color:var(--navy)}.oh-btns .white{background:#fff;color:var(--navy)}.oh-btns .red{background:#b4462e;color:#fff}
+.oh-admin table{width:100%;border-collapse:collapse;background:#fff;color:var(--ink);font-size:14px;margin-top:10px}
+.oh-admin th{background:var(--gold);color:var(--navy);text-align:left;padding:6px}.oh-admin td{border-bottom:1px solid #eee;padding:6px;word-break:break-word}
+@media (min-width:600px){.oh-row{flex-direction:row;gap:16px}.oh-row>div{flex:1}}
+@media (min-width:901px){
+  .oh-page{flex-direction:row;height:100vh;min-height:640px}
+  .oh-hero{flex:1 1 46%;height:auto}
+  .oh-hero-img{object-fit:contain;object-position:center top}
+  .oh-hero::after{background:linear-gradient(to bottom,rgba(8,29,45,0) 60%,rgba(8,29,45,1) 82%)}
+  .oh-cap{bottom:4vh;padding:0 3vw}
+  .oh-cap h1{font-size:clamp(44px,5.2vw,84px)}
+  .oh-rule{width:70%;margin:1.4vh auto}
+  .oh-when{font-size:clamp(16px,1.6vw,24px)}.oh-addr{font-size:clamp(14px,1.3vw,20px)}
+  .oh-panel{flex:1 1 54%;justify-content:center;padding:4vh 4.5vw;overflow:auto}
+  .oh-panel h2{font-size:clamp(34px,3.4vw,54px)}
+  .oh-panel input[type=text],.oh-panel input[type=tel],.oh-panel input[type=email],.oh-panel select{font-size:19px}
+  .oh-hs{width:62px;height:62px}.oh-who{font-size:14px}.oh-who b{font-size:16px}.oh-logo img{height:58px}
+}
