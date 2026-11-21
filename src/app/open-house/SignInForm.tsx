@@ -9,7 +9,7 @@ const TIMEOUT_MS = 8000;
 type Status = "queued" | "sent" | "not-accepted";
 type SignIn = {
   id: string; time: string; submittedAt: string; startedAt: number;
-  name: string; phone: string; email: string; agent: "" | "Yes" | "No"; who: string; heard: string; consent: "Yes";
+  name: string; phone: string; email: string; agent: "" | "Yes" | "No"; who: string; brokerage?: string; heard: string; consent: "Yes";
   status: Status; attempts: number;
 };
 
@@ -33,7 +33,7 @@ async function send(slug: string, item: SignIn): Promise<Status> {
     const response = await fetch(openHouseSigninEndpoint, {
       method: "POST", mode: "cors", credentials: "omit", cache: "no-store", referrerPolicy: "no-referrer", signal: controller.signal,
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ openHouse: slug, name: item.name, phone: item.phone, email: item.email, realtor: item.agent, realtorName: item.agent === "Yes" ? item.who : "", heard: item.heard, consent: true, companyWebsite: "", startedAt: item.startedAt, submittedAt: item.submittedAt }),
+      body: JSON.stringify({ openHouse: slug, name: item.name, phone: item.phone, email: item.email, realtor: item.agent, realtorName: item.agent === "Yes" ? item.who : "", realtorBrokerage: item.agent === "Yes" ? item.brokerage || "" : "", heard: item.heard, consent: true, companyWebsite: "", startedAt: item.startedAt, submittedAt: item.submittedAt }),
     });
     if (response.ok) return "sent";
     if (response.status === 400 || response.status === 410 || response.status === 413) return "not-accepted";
@@ -57,10 +57,10 @@ async function flush(slug: string) {
 }
 
 function csv(list: SignIn[]) {
-  const header = ["Time", "Name", "Phone", "Email", "Working with a Realtor", "Realtor name", "How heard", "Consent", "Sent to CRM"];
+  const header = ["Time", "Name", "Phone", "Email", "Working with a Realtor", "Realtor name", "Realtor brokerage", "How heard", "Consent", "Sent to CRM"];
   const q = (value: unknown) => { let v = String(value ?? ""); if (/^[=+\-@\t\r]/.test(v)) v = "'" + v; return '"' + v.replace(/"/g, '""') + '"'; };
   const label: Record<Status, string> = { sent: "Yes", queued: "Not yet (waiting to send)", "not-accepted": "No (enter by hand)" };
-  return [header.map(q).join(",")].concat(list.map((r) => [r.time, r.name, r.phone, r.email, r.agent, r.who, r.heard, r.consent, label[r.status]].map(q).join(","))).join("\r\n");
+  return [header.map(q).join(",")].concat(list.map((r) => [r.time, r.name, r.phone, r.email, r.agent, r.who, r.brokerage || "", r.heard, r.consent, label[r.status]].map(q).join(","))).join("\r\n");
 }
 
 export default function SignInForm({ slug, street }: { slug: string; street: string }) {
@@ -113,7 +113,7 @@ export default function SignInForm({ slug, street }: { slug: string; street: str
     const now = new Date();
     const item: SignIn = {
       id: newId(), time: now.toLocaleString(), submittedAt: now.toISOString(), startedAt: startedAt.current,
-      name, phone, email, agent, who: agent === "Yes" ? value("who") : "", heard: HEARD.includes(value("heard")) ? value("heard") : "", consent: "Yes",
+      name, phone, email, agent, who: agent === "Yes" ? value("who") : "", brokerage: agent === "Yes" ? value("brokerage") : "", heard: HEARD.includes(value("heard")) ? value("heard") : "", consent: "Yes",
       status: "queued", attempts: 0,
     };
     save(slug, [...load(slug), item]);
@@ -155,7 +155,10 @@ export default function SignInForm({ slug, street }: { slug: string; street: str
             {(["Yes", "No"] as const).map((option) => <label key={option} className={agent === option ? "is-on" : ""}><input type="radio" name="agent" value={option} checked={agent === option} onChange={() => setAgent(option)} /><span>{option}</span></label>)}
           </div>
         </fieldset>
-        {agent === "Yes" && <div><label htmlFor="oh-who">If yes, who?</label><input id="oh-who" name="who" type="text" maxLength={120} /></div>}
+        {agent === "Yes" && <div className="oh-row">
+          <div><label htmlFor="oh-who">Agent&apos;s name</label><input id="oh-who" name="who" type="text" maxLength={120} autoComplete="off" /></div>
+          <div><label htmlFor="oh-brokerage">Agent&apos;s brokerage</label><input id="oh-brokerage" name="brokerage" type="text" maxLength={120} autoComplete="off" /></div>
+        </div>}
         <label htmlFor="oh-heard">How did you hear about it?</label>
         <select id="oh-heard" name="heard" defaultValue=""><option value="">Select…</option>{HEARD.map((option) => <option key={option}>{option}</option>)}</select>
         <label className="oh-trap" aria-hidden="true">Company website<input type="text" name="companyWebsite" tabIndex={-1} autoComplete="off" /></label>
@@ -190,8 +193,8 @@ export default function SignInForm({ slug, street }: { slug: string; street: str
         <button type="button" className="red" onClick={clearAll}>Clear all entries</button>
         <button type="button" className="white" onClick={() => setAdmin(null)}>Close</button>
       </div>
-      <table><thead><tr><th>#</th><th>Time</th><th>Name</th><th>Phone</th><th>Email</th><th>Realtor?</th><th>Who</th><th>Heard via</th><th>CRM</th></tr></thead>
-        <tbody>{admin.map((r, i) => <tr key={r.id}><td>{i + 1}</td><td>{r.time}</td><td>{r.name}</td><td>{r.phone}</td><td>{r.email}</td><td>{r.agent}</td><td>{r.who}</td><td>{r.heard}</td><td>{r.status === "sent" ? "Sent" : r.status === "queued" ? "Waiting" : "Not accepted"}</td></tr>)}</tbody>
+      <table><thead><tr><th>#</th><th>Time</th><th>Name</th><th>Phone</th><th>Email</th><th>Realtor?</th><th>Who</th><th>Brokerage</th><th>Heard via</th><th>CRM</th></tr></thead>
+        <tbody>{admin.map((r, i) => <tr key={r.id}><td>{i + 1}</td><td>{r.time}</td><td>{r.name}</td><td>{r.phone}</td><td>{r.email}</td><td>{r.agent}</td><td>{r.who}</td><td>{r.brokerage}</td><td>{r.heard}</td><td>{r.status === "sent" ? "Sent" : r.status === "queued" ? "Waiting" : "Not accepted"}</td></tr>)}</tbody>
       </table>
     </div>}
   </>;
